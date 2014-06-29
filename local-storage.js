@@ -1,6 +1,4 @@
-  /************************************************************
-  @description localStorage
-  *************************************************************/
+define(['jquery'], function() {
   var LocalStorage = {
     create: function(key, value) {
       localStorage.setItem(key, JSON.stringify(value));
@@ -12,3 +10,4 @@
       localStorage.removeItem(key);
     }
   };
+});
