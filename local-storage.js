@@ -1,4 +1,4 @@
-define(['jquery'], function() {
+define(function() {
   var LocalStorage = {
     create: function(key, value) {
       localStorage.setItem(key, JSON.stringify(value));
@@ -10,4 +10,11 @@ define(['jquery'], function() {
       localStorage.removeItem(key);
     }
   };
+
+  return {
+    create: LocalStorage.create,
+    read: LocalStorage.read,
+    remove: LocalStorage.remove
+  };
+
 });
